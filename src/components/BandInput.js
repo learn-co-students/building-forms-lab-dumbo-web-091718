@@ -5,7 +5,10 @@ class BandInput extends Component {
   render() {
     return(
       <div>
-        Band Input
+        <form onSubmit={e => this.props.handleSubmit(e)}>
+          <input type='text' name='name' onChange={e => this.props.handleChange(e)} value={this.props.state} /><br />
+          <input type='submit' value='Submit' />
+        </form>
       </div>
     )
   }
